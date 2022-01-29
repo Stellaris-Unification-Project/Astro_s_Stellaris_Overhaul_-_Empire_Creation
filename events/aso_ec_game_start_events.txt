@@ -1,0 +1,66 @@
+namespace = aso_ec_game_start
+
+### Set up origins
+event = {
+	id = aso_ec_game_start.1
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_playable_country = {
+			limit = { has_origin = aso_ec_origin_amoeba_alveo }
+			country_event = { id = aso_ec_origin.1 }
+		}
+
+		every_playable_country = {
+			limit = { has_origin = aso_ec_origin_eldest_sibling }
+			country_event = { id = aso_ec_origin.2 }
+		}
+
+		every_playable_country = {
+			limit = { has_origin = aso_ec_origin_enlightened }
+			country_event = { id = aso_ec_origin.3 }
+		}
+
+		every_playable_country = {
+			limit = { has_origin = aso_ec_origin_living_planet }
+			country_event = { id = aso_ec_origin.4 }
+		}
+
+		every_playable_country = {
+			limit = { has_origin = aso_ec_origin_overlord }
+			country_event = { id = aso_ec_origin.5 }
+		}
+
+		every_playable_country = {
+			limit = { has_origin = aso_ec_origin_presentient_cousins }
+			country_event = { id = aso_ec_origin.6 }
+		}
+
+		every_playable_country = {
+			limit = { has_origin = aso_ec_origin_rogue_planet }
+			country_event = { id = aso_ec_origin.7 }
+		}
+
+		every_galaxy_planet = {
+			limit = { has_planet_flag = pf_aso_ec_origin_sins_of_the_past_habitat }
+			planet_event = { id = aso_ec_origin.8 }
+		}
+
+		every_playable_country = {
+			limit = { has_origin = aso_ec_origin_tale_of_two_planets }
+			country_event = { id = aso_ec_origin.9 }
+		}
+
+		every_playable_country = {
+			limit = { has_origin = aso_ec_origin_unilateral_trade_agreement }
+			country_event = { id = aso_ec_origin.10 }
+		}
+		
+		every_playable_country = {
+			limit = { has_origin = aso_ec_origin_violent_uplift }
+			country_event = { id = aso_ec_origin.11 }
+		}
+	}
+}

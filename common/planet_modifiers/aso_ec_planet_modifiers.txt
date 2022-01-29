@@ -1,0 +1,11 @@
+###########################
+# Planet Modifiers
+###########################
+#
+# Origin Amoeba Alveo Spawning Grounds
+#
+
+pm_aso_ec_origin_amoeba_alveo_breeding_grounds = {
+	spawn_chance = {} # From Origin
+	modifier = "pm_aso_ec_origin_amoeba_alveo_breeding_grounds"
+}

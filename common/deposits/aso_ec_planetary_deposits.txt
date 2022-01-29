@@ -1,0 +1,66 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# blocked_modifier - applied to planet
+# planet_modifier - applied to planet always
+# station = station class in orbit to gather
+#
+# SPECIAL PLANETARY DEPOSITS
+# Supply Cache: +5 Alloys/Consumer Goods/Mineral/Energy/Food; +1 Administrator job (Sins of the Past Origin)
+# Supply Cache (Lithoid): +40 minerals, +5 energy; +1 Administrator job (Sins of the Past Origin)
+#
+
+@high = 16
+@med = 8
+@low = 4
+
+@high_rare = 0.5
+@mid_rare = 0.25
+@low_rare = 0.1
+
+#From Sins of the Past Origin
+d_aso_ec_supply_cache = {
+	is_for_colonizable = yes
+	icon = "d_aso_ec_supply_cache"
+	category = deposit_cat_rare
+
+	potential = { always = no }
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			alloys = 5
+			consumer_goods = 5
+			minerals = 5
+			energy = 5
+			food = 5
+		}
+	}
+	
+	planet_modifier = {
+		job_administrator_add = 1
+		planet_max_buildings_add = 3
+	}
+}
+
+#From Sins of the Past Origin
+d_aso_ec_supply_cache_lithoid = {
+	is_for_colonizable = yes
+	icon = "d_aso_ec_supply_cache"
+	category = deposit_cat_rare
+
+	potential = { always = no }
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			minerals = 40
+			energy = 5
+		}
+	}
+	
+	planet_modifier = {
+		job_administrator_add = 1
+		planet_max_buildings_add = 3
+	}
+}

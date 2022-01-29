@@ -1,0 +1,96 @@
+# Start Screen Messages
+# Parameters:
+#   trigger, a trigger with country which decides if this is a valid part. Empty will be treated as always=yes.
+#   localization, a key to a localized string.
+#	location, decides where this chunk of text is located in the description, cannot be negative.
+
+# Amoeba Alveo
+part = {
+	location = 0
+	localization = "START_SCREEN_ASO_EC_ORIGIN_AMOEBA_ALVEO"
+	trigger = { has_origin = aso_ec_origin_amoeba_alveo }
+}
+
+# Eldest Sibling
+part = {
+	location = 0
+	localization = "START_SCREEN_ASO_EC_ORIGIN_ELDEST_SIBLING"
+	trigger = { has_origin = aso_ec_origin_eldest_sibling }
+}
+
+# Enlightened
+part = {
+	location = 0
+	localization = "START_SCREEN_ASO_EC_ORIGIN_ENLIGHTENED"
+	trigger = { has_origin = aso_ec_origin_enlightened }
+}
+
+# Living Planet
+part = {
+	location = 0
+	localization = "START_SCREEN_ASO_EC_ORIGIN_LIVING_PLANET"
+	trigger = {
+		has_origin = aso_ec_origin_living_planet
+		NOT = { has_government = gov_devouring_swarm }
+	}
+}
+
+# Living Planet Devouring Swarm
+part = {
+	location = 0
+	localization = "START_SCREEN_ASO_EC_ORIGIN_LIVING_PLANET_DEVOURING_SWARM"
+	trigger = {
+		has_origin = aso_ec_origin_living_planet
+		has_government = gov_devouring_swarm
+	}
+}
+
+# Overlord
+part = {
+	location = 0
+	localization = "START_SCREEN_ASO_EC_ORIGIN_OVERLORD"
+	trigger = { has_origin = aso_ec_origin_overlord }
+}
+
+# Presentient Cousins
+part = {
+	location = 0
+	localization = "START_SCREEN_ASO_EC_ORIGIN_PRESENTIENT_COUSINS"
+	trigger = { has_origin = aso_ec_origin_presentient_cousins }
+}
+
+# Rogue Planet
+part = {
+	location = 0
+	localization = "START_SCREEN_ASO_EC_ORIGIN_ROGUE_PLANET"
+	trigger = { has_origin = aso_ec_origin_rogue_planet }
+}
+
+# Sins of the Past
+part = {
+	location = 0
+	localization = "START_SCREEN_ASO_EC_ORIGIN_SINS_OF_THE_PAST"
+	trigger = { has_origin = aso_ec_origin_sins_of_the_past }
+}
+
+
+# Tale of Two Planets
+part = {
+	location = 0
+	localization = "START_SCREEN_ASO_EC_ORIGIN_TALE_OF_TWO_PLANETS"
+	trigger = { has_origin = aso_ec_origin_tale_of_two_planets }
+}
+
+# Unilateral Trade Agreement
+part = {
+	location = 0
+	localization = "START_SCREEN_ASO_EC_ORIGIN_UNILATERAL_TRADE_AGREEMENT"
+	trigger = { has_origin = aso_ec_origin_unilateral_trade_agreement }
+}
+
+# Violent Uplift
+part = {
+	location = 0
+	localization = "START_SCREEN_ASO_EC_ORIGIN_VIOLENT_UPLIFT"
+	trigger = { has_origin = aso_ec_origin_violent_uplift }
+}

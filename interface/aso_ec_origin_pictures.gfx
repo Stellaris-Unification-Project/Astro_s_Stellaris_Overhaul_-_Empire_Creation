@@ -1,0 +1,70 @@
+### ASO GFX
+
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_aso_ec_origin_amoeba_alveo"
+		texturefile = "gfx/event_pictures/origins/aso_ec_origin_amoeba_alveo.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_aso_ec_origin_eldest_sibling"
+		texturefile = "gfx/event_pictures/origins/aso_ec_origin_eldest_sibling.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_aso_ec_origin_enlightened"
+		texturefile = "gfx/event_pictures/origins/aso_ec_origin_enlightened.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_aso_ec_origin_living_planet"
+		texturefile = "gfx/event_pictures/origins/aso_ec_origin_living_planet.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_aso_ec_origin_overlord"
+		texturefile = "gfx/event_pictures/origins/aso_ec_origin_overlord.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_aso_ec_origin_presentient_cousins"
+		texturefile = "gfx/event_pictures/origins/aso_ec_origin_presentient_cousins.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_aso_ec_origin_rogue_planet"
+		texturefile = "gfx/event_pictures/origins/aso_ec_origin_rogue_planet.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_aso_ec_origin_sins_of_the_past"
+		texturefile = "gfx/event_pictures/origins/aso_ec_origin_sins_of_the_past.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_aso_ec_origin_tale_of_two_planets"
+		texturefile = "gfx/event_pictures/origins/aso_ec_origin_tale_of_two_planets.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_aso_ec_origin_unilateral_trade_agreement"
+		texturefile = "gfx/event_pictures/origins/aso_ec_origin_unilateral_trade_agreement.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_aso_ec_origin_violent_uplift"
+		texturefile = "gfx/event_pictures/origins/aso_ec_origin_violent_uplift.dds"
+		alwaystransparent = yes
+	}
+}

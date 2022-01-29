@@ -1,0 +1,19 @@
+# A fleet has entered a system. Scope = Fleet; From = System.
+on_entering_system_fleet = {
+	events = {
+		aso_ec_origin_amoeba_alveo.11 # Create Special Projects in Amor Alveo
+	}
+}
+
+# No scope, like on_game_start
+on_five_year_pulse = {
+	events = {
+		aso_ec_origin_amoeba_alveo.1 # Spawn Amoeba fleet
+	}
+}
+
+on_game_start = {
+	events = {
+		aso_ec_game_start.1 # Set up Origins
+	}
+}

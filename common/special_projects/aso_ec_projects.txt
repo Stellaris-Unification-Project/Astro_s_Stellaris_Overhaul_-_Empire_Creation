@@ -1,0 +1,57 @@
+special_project = {
+	key = "aso_ec_ORIGIN_AMOEBA_ALVEO_1_INVESTIGATE_BREEDING_GROUNDS"
+	event_chain = aso_ec_origin_amoeba_alveo_chain
+	cost = 30
+	icon = "gfx/interface/icons/situation_log/situation_log_society.dds"
+	picture = GFX_evt_landing_ship
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	
+	on_success = { ship_event = { id = aso_ec_origin_amoeba_alveo.6 } }
+	
+	on_fail = {}
+}
+
+special_project = {
+	key = "aso_ec_ORIGIN_AMOEBA_ALVEO_2_INVESTIGATE_COORDINATES"
+	event_chain = aso_ec_origin_amoeba_alveo_chain
+	days_to_research = 30
+	icon = "gfx/interface/icons/situation_log/situation_log_society.dds"
+	picture = GFX_evt_landing_ship
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	
+	on_success = { ship_event = { id = aso_ec_origin_amoeba_alveo.12 } }
+	
+	on_fail = {}
+}
+
+special_project = {
+	key = "aso_ec_ORIGIN_AMOEBA_ALVEO_3_TURN_ON_MACHINE"
+	event_chain = aso_ec_origin_amoeba_alveo_chain
+	cost = 1500
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_society.dds"
+	picture = GFX_evt_landing_ship
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	
+	on_success = { ship_event = { id = aso_ec_origin_amoeba_alveo.13 } }
+	
+	on_fail = {}
+}

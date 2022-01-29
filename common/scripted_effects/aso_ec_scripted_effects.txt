@@ -1,0 +1,551 @@
+### Scripted Effects
+#
+## Origins
+# Generate Eldest Sibling
+# Generate Enlightened NPC
+# Create Overlord Vassal
+# Create Unilateral Trade Agreement Tributary
+# Setup Sins of the Past Homeworld
+# Generate Presentient Cousins
+# Spawn Amoeba Mother
+# Spawn Amoeba Father
+# Spawn Amoeba Fleet
+#
+
+# Origins
+aso_ec_origin_eldest_sibling_generate_npc = {
+	create_country = {
+		name = random
+		authority = random
+		civics = {
+			civic = civic_increasing_urbanization
+			civic = civic_atmospheric_pollution
+		}
+		species = event_target:et_aso_ec_origin_eldest_sibling_species
+		ethos = random
+		flag = {
+			icon = {
+				category = "spherical"
+				file = "flag_spherical_22.dds"
+			}
+			background= {
+				category = "backgrounds"
+				file = "new_dawn.dds"
+			}
+			colors={
+				"turquoise"
+				"green"
+				"null"
+				"null"
+			}
+		}
+		origin = "origin_enlightened" # Should only be visible if they become spacefaring
+		type = primitive
+	}
+	last_created_country = {
+		set_graphical_culture = industrial_01
+		set_country_flag = early_space_age 
+		set_primitive_age = early_space_age
+		change_country_flag = {
+			icon = {
+				category = "special"
+				file = "primitive.dds"
+			}
+			background= {
+				category = "backgrounds"
+				file = "new_dawn.dds"
+			}
+			colors={
+				"grey"
+				"dark_grey"
+				"null"
+				"null"
+			}
+		}
+	}
+	set_owner = last_created_country
+	set_capital = yes
+	while = {
+		count = 28
+		create_pop = { species = event_target:et_aso_ec_origin_eldest_sibling_species }
+	}
+	add_building = building_primitive_farm
+	add_building = building_primitive_factory
+	add_building = building_primitive_mine
+	add_building = building_primitive_power_plant
+	add_building = building_primitive_capital
+	add_building = building_urban_dwellings
+	remove_building = building_colony_shelter
+	create_primitive_blockers = yes
+	while = {
+		count = 5
+		create_army = {
+			name = "NAME_Post-Atomic_Army"
+			owner = last_created_country
+			species = last_created_species
+			type = "postatomic_army"
+		}
+	}
+}
+
+aso_ec_origin_enlightened_generate_npc = {
+	if = {
+		limit = { root = { is_militarist = yes } }
+		create_country = {
+			name_list = random
+			species = random_non_machine
+			type = default
+			origin = origin_default
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			ethos = {
+				ethic = "ethic_fanatic_xenophile"
+				ethic = "ethic_militarist"
+			}
+			effect = {
+				save_event_target_as = get_aso_ec_origin_enlightened_npc_country
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else_if = {
+		limit = { root = { is_pacifist = yes } }
+		create_country = {
+			name_list = random
+			species = random_non_machine
+			type = default
+			origin = origin_default
+			name = random	#does this fix the blank empire name?
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			ethos = {
+				ethic = "ethic_fanatic_xenophile"
+				ethic = "ethic_pacifist"
+			}
+			effect = {
+				save_event_target_as = get_aso_ec_origin_enlightened_npc_country
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else_if = {
+		limit = { root = { is_spiritualist = yes } }
+		create_country = {
+			name_list = random
+			species = random_non_machine
+			type = default
+			origin = origin_default
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			ethos = {
+				ethic = "ethic_fanatic_xenophile"
+				ethic = "ethic_spiritualist"
+			}
+			effect = {
+				save_event_target_as = get_aso_ec_origin_enlightened_npc_country
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else_if = {
+		limit = { root = { is_materialist = yes } }
+		create_country = {
+			name_list = random
+			species = random_non_machine
+			type = default
+			origin = origin_default
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			randomize_ethos = yes
+			ethos = {
+				ethic = "ethic_fanatic_xenophile"
+				ethic = "ethic_materialist"
+			}
+			effect = {
+				save_event_target_as = get_aso_ec_origin_enlightened_npc_country
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else_if = {
+		limit = { root = { is_authoritarian = yes } }
+		create_country = {
+			name_list = random
+			species = random_non_machine
+			type = default
+			origin = origin_default
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			ethos = {
+				ethic = "ethic_fanatic_xenophile"
+				ethic = "ethic_authoritarian"
+			}
+			effect = {
+				save_event_target_as = get_aso_ec_origin_enlightened_npc_country
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else_if = {
+		limit = { root = { is_egalitarian = yes } }
+		create_country = {
+			name_list = random
+			species = random_non_machine
+			type = default
+			origin = origin_default
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			ethos = {
+				ethic = "ethic_fanatic_xenophile"
+				ethic = "ethic_egalitarian"
+			}
+			effect = {
+				save_event_target_as = get_aso_ec_origin_enlightened_npc_country
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else = {
+		create_country = {
+			name_list = random
+			species = random_non_machine
+			type = default
+			origin = origin_default
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			randomize_ethos = yes
+			ethos = { ethic = "ethic_fanatic_xenophile" }
+			effect = {
+				save_event_target_as = get_aso_ec_origin_enlightened_npc_country
+				establish_communications_no_message = root
+			}
+		}
+	}
+	last_created_country = { set_graphical_culture = event_target:get_aso_ec_origin_enlightened_country }
+}
+
+create_aso_ec_origin_overlord_vassal = {
+	create_country = {
+		name_list = random
+		species = event_target:get_aso_ec_origin_overlord_vassal_species
+		type = default
+		origin = "aso_ec_origin_overlord_npc"
+		ignore_initial_colony_error = yes
+		day_zero_contact = no
+		randomize_ethos = yes
+		effect = {
+			save_event_target_as = create_aso_ec_origin_overlord_vassal
+			establish_communications_no_message = root
+		}
+	}
+}
+
+create_aso_ec_origin_unilateral_trade_agreement_tributary = {
+	create_country = {
+		name_list = random
+		species = event_target:et_aso_ec_origin_unilateral_trade_agreement_tributary_species
+		type = default
+		origin = "aso_ec_origin_unilateral_trade_agreement_npc"
+		ignore_initial_colony_error = yes
+		day_zero_contact = no
+		randomize_ethos = yes
+		effect = {
+			save_event_target_as = create_aso_ec_origin_unilateral_trade_agreement_tributary
+			establish_communications_no_message = root
+		}
+	}
+}
+
+aso_ec_origin_sins_of_the_past_home_planet_setup = {
+	change_pc = pc_habitat
+	owner = {
+		give_starting_resources_effect = yes
+		save_event_target_as = et_aso_ec_origin_sins_of_the_past_habitat_owner
+		give_technology = {
+			tech = tech_habitat_1
+			message = no
+		}
+		add_research_option = tech_habitat_2
+		
+		if = {
+			limit = {
+				OR = {
+					is_lithoid_empire = no
+					is_catalytic_empire = yes
+				}
+			}
+			give_technology = {
+				tech = tech_eco_simulation
+				message = no
+			}
+			give_technology = {
+				tech = tech_hydroponics
+				message = no
+			}
+		}
+		else = {
+			give_technology = {
+				tech = tech_powered_exoskeletons
+				message = no
+			}
+			give_technology = {
+				tech = tech_space_mining_1
+				message = no
+			}
+		}
+	}
+	while = {
+		count = 30
+		create_pop = { species = owner_main_species }
+	}
+	set_planet_entity = {
+		entity = "habitat_phase_02_entity"
+		graphical_culture = event_target:et_aso_ec_origin_sins_of_the_past_habitat_owner
+	}
+	set_planet_size = 6
+	set_planet_flag = advanced_habitat
+	add_district_and_planet_size_if_needed_effect = { district = district_hab_housing }
+	add_district_and_planet_size_if_needed_effect = { district = district_hab_housing }
+	add_district_and_planet_size_if_needed_effect = { district = district_hab_science }
+	add_district_and_planet_size_if_needed_effect = { district = district_hab_commercial }
+	add_district_and_planet_size_if_needed_effect = { district = district_hab_industrial }
+	add_district_and_planet_size_if_needed_effect = { district = district_hab_cultural }
+	add_building = building_hab_major_capital
+	add_building = building_bureaucratic_1
+	if = {
+		limit = { owner = { is_lithoid_empire = no } }
+		add_deposit =  d_aso_ec_supply_cache
+		add_building = building_hydroponics_farm
+		add_building = building_hydroponics_farm
+		add_building = building_foundry_1
+		add_building = building_factory_1
+	}
+	else = {
+		add_deposit =  d_aso_ec_supply_cache_lithoid
+		add_building = building_foundry_1
+		add_building = building_foundry_1
+		add_building = building_factory_1
+		add_building = building_factory_1
+	}
+	if = {
+		limit = { owner = { has_valid_civic = civic_reanimated_armies } }
+		add_building = building_dread_encampment
+
+		solar_system = { #Necromancers do not give engineering. So make sure there's some readily-accessible engineering
+			while = {
+				count = 2
+				random_system_planet = {
+					limit = {
+						has_deposit_for = shipclass_research_station
+						NOT = { has_deposit = d_engineering_6 }
+					}
+					clear_deposits = yes
+					add_deposit = d_engineering_6
+				}
+			}
+		}
+	}
+	else = {
+		add_district_and_planet_size_if_needed_effect = {
+			district = district_hab_science
+		}
+	}
+	solar_system = {
+		every_system_planet = {
+			limit = { has_planet_flag = mining_planet }
+			create_mining_station = { owner = event_target:void_dweller_owner }
+		}
+	}
+}
+
+aso_ec_origin_presentient_cousins_generate_presentient_pops = {
+	if = {
+		limit = { owner = { has_origin = aso_ec_origin_presentient_cousins } }
+		owner = { set_country_flag = found_presapients }
+		random_list = {
+			10 = {
+				create_species = {
+					name = random
+					class = "PRE_MAM"
+					portrait = random
+					traits = { trait = random_presapient_trait }
+					homeworld = this
+					sapient = no
+				}
+			}
+			10 = { 
+				create_species = {
+					name = random
+					class = "PRE_REP"
+					portrait = random
+					traits = { trait = random_presapient_trait }
+					homeworld = this
+					sapient = no
+				}
+			}
+			10 = { 
+				create_species = {
+					name = random
+					class = "PRE_AVI"
+					portrait = random
+					traits = { trait = random_presapient_trait }
+					homeworld = this
+					sapient = no
+				}
+			}
+			10 = { 
+				create_species = {
+					name = random
+					class = "PRE_ART"
+					portrait = random
+					traits = { trait = random_presapient_trait }
+					homeworld = this
+					sapient = no
+				}
+			}
+			10 = { 
+				create_species = {
+					name = random
+					class = "PRE_MOL"
+					portrait = random
+					traits = { trait = random_presapient_trait }
+					homeworld = this
+					sapient = no
+				}
+			}
+			10 = { 
+				create_species = {
+					name = random
+					class = "PRE_FUN"
+					portrait = random
+					traits = { trait = random_presapient_trait }
+					homeworld = this
+					sapient = no
+				}
+			}
+		}
+		while = {
+			limit = {
+				count_owned_pop = {
+					limit = { is_sapient = no }
+					count < 3
+				}
+			}
+			create_pop = { species = last_created_species }
+		}
+	}
+}
+
+aso_ec_origin_amoeba_alveo_spawn_amoeba_fleet = {
+	if = {
+		limit = {
+			exists = event_target:get_aso_ec_origin_amoeba_alveo_space_amoeba_mother
+			exists = event_target:get_aso_ec_origin_amoeba_alveo_space_amoeba_father			
+		}
+		if = {
+			limit = { has_global_flag = gf_aso_ec_origin_amoeba_alveo_turned_on_facility }
+			create_fleet = {
+				name = "NAME_Space_Amoeba"
+				effect = {
+					set_owner = event_target:get_aso_ec_origin_amoeba_alveo_country
+					while = {
+						count = 6
+						create_ship = {
+							name = ""
+							design = "NAME_Small_Space_Organism_Teal"
+							prefix = no
+							upgradable = no
+						}
+					}
+					set_location = event_target:get_aso_ec_origin_amoeba_alveo_breeding_grounds
+				}
+				settings = {
+					can_upgrade = no
+					can_disband = no
+					can_change_leader = no
+					uses_naval_capacity = no
+				}
+			}
+		}
+		else = {
+			create_amoeba_country = yes
+			event_target:amoeba_country = {
+				create_fleet = {
+					name = "NAME_Space_Amoeba"
+					effect = {
+						set_owner = event_target:amoeba_country
+						while = {
+							count = 6
+							create_ship = {
+								name = ""
+								design = "NAME_Small_Space_Organism_Teal"
+							}
+						}
+						set_location = event_target:get_aso_ec_origin_amoeba_alveo_breeding_grounds
+						set_fleet_stance = passive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 100
+					}
+					settings = {
+						can_upgrade = no
+						can_disband = no
+						can_change_leader = no
+						uses_naval_capacity = no
+					}
+				}
+				last_created_fleet = { queue_actions = { move_to = event_target:amoeba_home_system } }
+			}
+			event_target:get_aso_ec_origin_amoeba_alveo_country = { country_event = { id = aso_ec_origin_amoeba_alveo.5 } }
+		}
+	}
+}
+
+aso_ec_origin_amoeba_alveo_spawn_amoeba_mother = {
+	if = {
+		limit = { NOT = { exists = event_target:get_aso_ec_origin_amoeba_alveo_space_amoeba_mother } }
+		create_amoeba_country = yes
+		event_target:amoeba_country = {
+			create_fleet = {
+				name = "Space Amoeba Matron"
+				settings = { garrison = yes }
+				effect = {
+					set_owner = event_target:amoeba_country
+					create_ship = {
+						name = ""
+						design = "NAME_Great_Space_Organism"
+					}
+					save_global_event_target_as = get_aso_ec_origin_amoeba_alveo_space_amoeba_mother
+					set_location = event_target:get_aso_ec_origin_amoeba_alveo_breeding_grounds
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 100
+				}
+			}
+		}
+	}
+}
+
+aso_ec_origin_amoeba_alveo_spawn_amoeba_father = {
+	if = {
+		limit = { NOT = { exists = event_target:get_aso_ec_origin_amoeba_alveo_space_amoeba_father } }
+		create_amoeba_country = yes
+		event_target:amoeba_country = {
+			create_fleet = {
+				name = "Space Amoeba Patron"
+				settings = { garrison = yes }
+				effect = {
+					set_owner = event_target:amoeba_country
+					create_ship = {
+						name = ""
+						design = "NAME_Large_Space_Organism_Teal"
+					}
+					save_global_event_target_as = get_aso_ec_origin_amoeba_alveo_space_amoeba_father
+					set_location = event_target:get_aso_ec_origin_amoeba_alveo_breeding_grounds
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 100
+				}
+			}
+		}
+	}
+}

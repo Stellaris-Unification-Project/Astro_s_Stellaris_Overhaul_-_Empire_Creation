@@ -1,0 +1,565 @@
+namespace = aso_ec_taleoftwoplanets
+
+### Set the stage
+country_event = {
+	id = aso_ec_taleoftwoplanets.1
+	title = "aso_ec_taleoftwoplanets.1.name"
+	desc = "aso_ec_taleoftwoplanets.1.desc"
+	picture = GFX_evt_news_room
+	show_sound = event_conversation
+
+	is_triggered_only = yes
+	
+	option = {
+		name = aso_ec_taleoftwoplanets.1.a
+		custom_tooltip = aso_ec_taleoftwoplanets.1.a.tooltip
+		trigger = {
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		hidden_effect = {
+			add_resource = { unity = 300 }
+			country_event = { id = aso_ec_taleoftwoplanets.2 }
+		}
+	}
+
+	option = {
+		name = aso_ec_taleoftwoplanets.1.b
+		custom_tooltip = aso_ec_taleoftwoplanets.1.b.tooltip
+		trigger = {
+			OR = {
+				has_ethic = ethic_gestalt_consciousness
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		hidden_effect = {
+			give_technology = { tech = tech_automated_exploration }
+			country_event = { id = aso_ec_taleoftwoplanets.2 }
+		}
+	}
+
+	option = {
+		name = aso_ec_taleoftwoplanets.1.c
+		custom_tooltip = aso_ec_taleoftwoplanets.1.c.tooltip
+		trigger = {
+			OR = {
+				has_ethic = ethic_gestalt_consciousness
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		hidden_effect = {
+			create_fleet = {
+				effect = {
+					set_owner = prev
+					while = {
+						count = 5
+						create_ship = {
+							name = random
+							random_existing_design = corvette
+						}
+					}
+					set_location = prev.capital_star
+				}
+			}
+		}
+		country_event = { id = aso_ec_taleoftwoplanets.2 }
+	}
+}
+
+### Roll for the sister planet's starting situation
+country_event = {
+	id = aso_ec_taleoftwoplanets.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			20 = { country_event = { id = aso_ec_taleoftwoplanets.10 } }
+			20 = { country_event = { id = aso_ec_taleoftwoplanets.20 } }
+			20 = { country_event = { id = aso_ec_taleoftwoplanets.30 } }
+			20 = { country_event = { id = aso_ec_taleoftwoplanets.40 } }
+			20 = { country_event = { id = aso_ec_taleoftwoplanets.50 } }
+		}
+	}
+}
+
+### Roll 1: Uninhabited Planet
+country_event = {
+	id = aso_ec_taleoftwoplanets.10
+	title = "aso_ec_taleoftwoplanets.10.name"
+	desc = "aso_ec_taleoftwoplanets.10.desc"
+	picture = GFX_evt_cold_barren
+	show_sound = event_celebration
+
+	is_triggered_only = yes
+	
+	immediate = {
+		event_target:get_aso_ec_origin_tale_of_two_planets_sisterplanet = {
+			change_pc = rl_habitable_normal
+			reset_planet = yes
+		}
+	}
+	
+	option = {
+		name = aso_ec_taleoftwoplanets.10.a
+		custom_tooltip = aso_ec_taleoftwoplanets.10.a.tooltip
+
+		hidden_effect = {
+			give_technology = {
+				tech = tech_colonization_2
+			}
+			create_fleet = {
+				effect = {
+					set_owner = prev
+					create_ship = {
+						name = random
+						random_existing_design = colonizer
+					}
+					set_location = prev.capital_scope.star
+				}
+			}
+		}
+	}
+}
+
+### Roll 2: Presapient Planet
+country_event = {
+	id = aso_ec_taleoftwoplanets.20
+	title = "aso_ec_taleoftwoplanets.20.name"
+	desc = "aso_ec_taleoftwoplanets.20.desc"
+	picture = GFX_evt_news_room
+	show_sound = event_primitive_civilization
+
+	is_triggered_only = yes
+	
+	immediate = {
+		event_target:get_aso_ec_origin_tale_of_two_planets_sisterplanet = {
+			change_pc = rl_habitable_normal
+			reset_planet = yes
+			random_list = {
+				15 = {
+					create_species = {
+						name = random
+						class = "PRE_MAM"
+						portrait = random
+						traits = { trait = random_presapient_trait }
+						sapient = no
+					}
+				}
+				15 = {
+					create_species = {
+						name = random
+						class = "PRE_REP"
+						portrait = random
+						traits = { trait = random_presapient_trait }
+						sapient = no
+					}
+				}
+				15 = {
+					create_species = {
+						name = random
+						class = "PRE_AVI"
+						portrait = random
+						traits = { trait = random_presapient_trait }
+						sapient = no
+					}
+				}
+				15 = {
+					create_species = {
+						name = random
+						class = "PRE_ART"
+						portrait = random
+						traits = { trait = random_presapient_trait }
+						#homeworld = FROM
+						sapient = no
+					}
+				}
+				15 = {
+					create_species = {
+						name = random
+						class = "PRE_MOL"
+						portrait = random
+						traits = { trait = random_presapient_trait }
+						#homeworld = FROM
+						sapient = no
+					}
+				}
+				15 = {
+					create_species = {
+						name = random
+						class = "PRE_FUN"
+						portrait = random
+						traits = { trait = random_presapient_trait }
+						#homeworld = FROM
+						sapient = no
+					}
+				}
+			}
+			while = {
+				limit = {
+					count_owned_pop = {
+						limit = { is_sapient = no }
+						count < 3
+					}
+				}
+				create_pop = { species = last_created_species }
+			}
+		}
+	}
+
+	option = {
+		name = aso_ec_taleoftwoplanets.20.a
+		custom_tooltip = aso_ec_taleoftwoplanets.20.a.tooltip
+		trigger = {
+			NOR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		hidden_effect = { give_technology = { tech = tech_epigenetic_triggers } }
+	}
+	option = {
+		name = aso_ec_taleoftwoplanets.20.b
+		custom_tooltip = aso_ec_taleoftwoplanets.20.b.tooltip
+		trigger = {
+			NOR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		hidden_effect = {
+			give_technology = { tech = tech_colonization_2 }
+			create_fleet = {
+				effect = {
+					set_owner = prev
+					create_ship = {
+						name = random
+						random_existing_design = colonizer
+					}
+					set_location = prev.capital_star
+				}
+			}
+		}
+	}
+}
+
+### Roll 3: Primitive Planet
+country_event = {
+	id = aso_ec_taleoftwoplanets.30
+	title = "aso_ec_taleoftwoplanets.30.name"
+	desc = "aso_ec_taleoftwoplanets.30.desc"
+	picture = GFX_evt_alien_cavemen
+	show_sound = event_primitive_civilization
+
+	is_triggered_only = yes
+	
+	immediate = {
+		event_target:get_aso_ec_origin_tale_of_two_planets_sisterplanet = {
+			change_pc = rl_habitable_normal
+			reset_planet = yes
+			generate_primitives_on_planet = yes
+		}
+	}
+
+	option = {
+		name = aso_ec_taleoftwoplanets.30.a
+		custom_tooltip = aso_ec_taleoftwoplanets.30.a.tooltip
+		trigger = {
+			NOR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		hidden_effect = { add_resource = { society_research = 1000 } }
+	}
+	option = {
+		name = aso_ec_taleoftwoplanets.30.b
+		custom_tooltip = aso_ec_taleoftwoplanets.30.b.tooltip
+		trigger = {
+			NOR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		hidden_effect = { add_resource = { unity = 500 } }
+	}
+}
+
+### Roll 4: Tomb World
+country_event = {
+	id = aso_ec_taleoftwoplanets.40
+	title = "aso_ec_taleoftwoplanets.40.name"
+	desc = "aso_ec_taleoftwoplanets.40.desc"
+	picture = GFX_evt_tomb_world
+	show_sound = event_ghost_town
+
+	is_triggered_only = yes
+	
+	immediate = {
+		event_target:get_aso_ec_origin_tale_of_two_planets_sisterplanet = {
+			change_pc = pc_nuked
+			reset_planet = yes
+		}
+	}
+	
+	option = {
+		name = aso_ec_taleoftwoplanets.40.a
+		custom_tooltip = aso_ec_taleoftwoplanets.40.a.tooltip
+
+		hidden_effect = { give_technology = { tech = tech_tomb_world_adaption } }
+	}
+}
+
+### Roll 5: Nemesis
+country_event = {
+	id = aso_ec_taleoftwoplanets.50
+	title = "aso_ec_taleoftwoplanets.50.name"
+	desc = "aso_ec_taleoftwoplanets.50.desc"
+	picture = GFX_evt_atmospheric_flight
+	show_sound = event_cityscape
+
+	is_triggered_only = yes
+	
+	immediate = {
+		event_target:get_aso_ec_origin_tale_of_two_planets_sisterplanet = {
+			change_pc = rl_habitable_normal
+			reset_planet = yes
+			generate_primitives_on_planet = yes
+		}
+		last_created_country = {
+			save_event_target_as = et_aso_ec_origin_tale_of_two_planets_nemesiscountry
+			set_graphical_culture = industrial_01
+			set_country_flag = early_space_age
+			set_primitive_age = early_space_age
+		}
+	}
+	
+	option = {
+		name = aso_ec_taleoftwoplanets.50.a
+		custom_tooltip = aso_ec_taleoftwoplanets.50.a.tooltip
+
+		hidden_effect = {
+			add_resource = { unity = 500 }
+			country_event = { id = aso_ec_taleoftwoplanets.51 }
+		}
+	}
+
+	option = {
+		name = aso_ec_taleoftwoplanets.50.b
+		custom_tooltip = aso_ec_taleoftwoplanets.50.b.tooltip
+
+		trigger = {
+			NOR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+
+		hidden_effect = {
+			add_resource = { society_research = 1000 }
+			country_event = { id = aso_ec_taleoftwoplanets.52 }
+		}
+	}
+
+	option = {
+		name = aso_ec_taleoftwoplanets.50.c
+		custom_tooltip = aso_ec_taleoftwoplanets.50.c.tooltip
+
+		trigger = {
+			NOR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+
+		hidden_effect = {
+			create_fleet = {
+				effect = {
+					set_owner = prev
+					while = {
+						count = 5
+						create_ship = {
+							name = random
+							random_existing_design = corvette
+						}
+					}
+					set_location = event_target:get_aso_ec_origin_tale_of_two_planets_sisterplanet
+				}
+			}
+			country_event = { id = aso_ec_taleoftwoplanets.511 }
+		}
+	}
+}
+
+### They Make Contact
+country_event = {
+	id = aso_ec_taleoftwoplanets.51
+	title = "aso_ec_taleoftwoplanets.51.name"
+	desc = "aso_ec_taleoftwoplanets.51.desc"
+	picture = GFX_evt_board_meeting
+	show_sound = event_conversation
+
+	is_triggered_only = yes
+
+	option = {
+		name = aso_ec_taleoftwoplanets.51.a
+		custom_tooltip = aso_ec_taleoftwoplanets.51.a.tooltip
+		country_event = { id = aso_ec_taleoftwoplanets.511 }
+	}
+	
+	option = {
+		name = aso_ec_taleoftwoplanets.51.b
+		custom_tooltip = aso_ec_taleoftwoplanets.51.b.tooltip
+		country_event = { id = aso_ec_taleoftwoplanets.52 }
+	}
+}
+
+### They Attack; Random Results
+country_event = {
+	id = aso_ec_taleoftwoplanets.511
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			20 = { country_event = { id = aso_ec_taleoftwoplanets.5111 } }
+			20 = { country_event = { id = aso_ec_taleoftwoplanets.5112 } }
+			20 = { country_event = { id = aso_ec_taleoftwoplanets.5113 } }
+			20 = { country_event = { id = aso_ec_taleoftwoplanets.521 } }
+		}
+	}
+}
+
+### They Attack; They get Tombed
+country_event = {
+	id = aso_ec_taleoftwoplanets.5111
+	title = "aso_ec_taleoftwoplanets.5111.name"
+	desc = "aso_ec_taleoftwoplanets.5111.desc"
+	picture = GFX_evt_nuclear_explosion
+	show_sound = event_ship_explosion
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:get_aso_ec_origin_tale_of_two_planets_sisterplanet = {
+			change_pc = pc_nuked
+			reset_planet = yes
+#			add_deposit = d_radioactive_wasteland
+#			add_deposit = d_city_ruins
+#			add_deposit = d_bomb_crater
+			
+		}
+		event_target:et_aso_ec_origin_tale_of_two_planets_nemesiscountry = {
+			every_owned_pop = { kill_pop = yes }
+			destroy_country = yes
+		}
+		event_target:get_aso_ec_origin_tale_of_two_planets_homeworld = { add_planet_devastation = 50 }
+	}
+
+	option = {
+		name = aso_ec_taleoftwoplanets.5111.a
+		custom_tooltip = aso_ec_taleoftwoplanets.5111.a.tooltip
+
+		hidden_effect = { give_technology = { tech = tech_missiles_2 } }
+	}
+}
+
+### They Attack; They get Conquered
+country_event = {
+	id = aso_ec_taleoftwoplanets.5112
+	title = "aso_ec_taleoftwoplanets.5112.name"
+	desc = "aso_ec_taleoftwoplanets.5112.desc"
+	picture = GFX_evt_surrender
+	show_sound = event_planetary_riot
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:get_aso_ec_origin_tale_of_two_planets_sisterplanet = {
+			reset_planet = yes
+			set_owner = root
+		}
+	}
+
+	option = {
+		name = aso_ec_taleoftwoplanets.5112.a
+		custom_tooltip = aso_ec_taleoftwoplanets.5112.a.tooltip
+
+		hidden_effect = { give_technology = { tech = tech_missiles_2 } }
+	}
+}
+
+### They Attack; They get Destroyed
+country_event = {
+	id = aso_ec_taleoftwoplanets.5113
+	title = "aso_ec_taleoftwoplanets.5113.name"
+	desc = "aso_ec_taleoftwoplanets.5113.desc"
+	picture = GFX_evt_victorious_army
+	show_sound = event_space_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:et_aso_ec_origin_tale_of_two_planets_nemesiscountry = {
+			every_owned_pop = { kill_pop = yes }
+			destroy_country = yes
+		}
+		event_target:get_aso_ec_origin_tale_of_two_planets_sisterplanet = { reset_planet = yes }
+	}
+
+	option = {
+		name = aso_ec_taleoftwoplanets.5113.a
+		custom_tooltip = aso_ec_taleoftwoplanets.5113.a.tooltip
+
+		hidden_effect = { give_technology = { tech = tech_missiles_2 } }
+	}
+}
+
+### Diplomacy Random Results
+country_event = {
+	id = aso_ec_taleoftwoplanets.52
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			70 = { country_event = { id = aso_ec_taleoftwoplanets.521 } }
+			30 = { country_event = { id = aso_ec_taleoftwoplanets.511 } }
+		}
+	}
+}
+
+### A Union Is Formed
+country_event = {
+	id = aso_ec_taleoftwoplanets.521
+	title = "aso_ec_taleoftwoplanets.521.name"
+	desc = "aso_ec_taleoftwoplanets.521.desc"
+	picture = GFX_evt_announcement
+	show_sound = event_celebration
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:get_aso_ec_origin_tale_of_two_planets_sisterplanet = {
+			set_owner = root
+			reset_planet = yes
+		}
+	}
+
+	option = {
+		name = aso_ec_taleoftwoplanets.521.a
+		custom_tooltip = aso_ec_taleoftwoplanets.521.a.tooltip	
+	}
+}

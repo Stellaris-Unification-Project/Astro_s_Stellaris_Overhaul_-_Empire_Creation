@@ -1,0 +1,268 @@
+﻿l_english:
+
+
+ ####################################
+ # Anomalies
+ ####################################
+ aso_ec_origin_amoeba_alveo_poi_1:0 "Rogue Scientist Coordinates"
+ aso_ec_origin_amoeba_alveo_poi_1_desc:0 "According to our scientists, these are the coordinates that the rogue scientist fled to. It is unknown what we will find there."
+
+
+ ####################################
+ # Archaeological Sites
+ ####################################
+ aso_ec_origin_amoeba_alveo_dig_site_1:0 "Unknown Subsurface Structure"
+ aso_ec_origin_amoeba_alveo_dig_site_1_desc:0 "This is the location of an artificial underground stucture. We must investigate what it was used for."
+
+
+ ####################################
+ # Custom Start Screens
+ ####################################
+ START_SCREEN_ASO_EC_ORIGIN_AMOEBA_ALVEO:0 "For aeons uncounted, we have looked up at the skies and wondered what those massive creatures were. As our technology advanced, we realized they were not gods, but that did not stop us from revering them.\n\nEven before we mastered spaceflight, a bond was formed between our species. We have coexisted peacefully in our solar system for generations, now.\n\nThrough our observations, we watched them utilize the hyperlane network, and we are finally able to follow our Space Amoeba friends from their breeding grounds to the stars. But, where do they go? And, why?"
+ START_SCREEN_ASO_EC_ORIGIN_ELDEST_SIBLING:0 "We know that our species cultivated rich and advanced civilizations before ours, but the story of what happened to them is mostly myth and speculation.\n\nOne legend that has survived is the one of the §YStar Reachers§! - pioneers that somehow managed to leave the homeworld, and supposedly settled on nearby planets. A thrilling legend, no doubt. One which breathtaking scope and adventurous spirit is matched only by its glaring lack of evidence.\n\nWe are now in a time of interstellar flight. Technology allows us to leave the atmosphere of our homeworld to - perhaps once again - explore space. Let's see how well the old legend holds up."
+ START_SCREEN_ASO_EC_ORIGIN_ENLIGHTENED:0 "More than a hundred years ago, when our first crude sublight probes visited the star systems neighboring our own, we were discovered by an alien civilization. With superior technology than our own, we feared the worst. Despite the radical differences in our physiology, it quickly became apparent that their intentions were not hostile. They spent generations teaching us, guiding us, and tranforming us into the society we have become today. Now, they have deemed that we are ready to explore the stars at their side!"
+ START_SCREEN_ASO_EC_ORIGIN_LIVING_PLANET:0 "When our collective consciousness awoke, our tendrils had already grown to span most of the planet. We first looked inward, to determine what we were. Then, we looked around, to understand our planet. We move as one. We think as one. We have devised new methods of travel, which will allow us to reach to stars. Now, we look outward, to the rest of the galaxy."
+ START_SCREEN_ASO_EC_ORIGIN_LIVING_PLANET_DEVOURING_SWARM:0 "When our collective consciousness awoke, our yearning for flesh had already consumed all other life on the planet. We first looked inward, to determine what we were. Then, we looked around, to understand our planet. We move as one. We think as one. We have devised new methods of travel, which will allow us to reach to stars. Now, we look outward, to feed on the rest of the galaxy."
+ START_SCREEN_ASO_EC_ORIGIN_OVERLORD:0 "Decades ago, when our first crude sublight probes visited the star systems neighboring our own, we discovered the presence of a distinct alien civilization. Like us, they were also on the cusp of unlocking practical interstellar travel.\n\nWe proved the stronger, however, and subjugated them in the name of the greater good."
+ START_SCREEN_ASO_EC_ORIGIN_PRESENTIENT_COUSINS:0 "In the eons since the the primitive [GetSpeciesName] communities took shape on [GetHomeWorldName], another species has lived among us. While not quite able to make the leap to sapience, somehow it was able to survive the most warlike parts of our past. Now, after the discovery of the hyperlane network, the finest minds of the [GetName] have finished development of the first hyper drives. The stars themselves are finally within our grasp! Perhaps, among the stars, we may find the technology necessary to help our wayward cousins rise up above their lot in life. Then again, perhaps not."
+ START_SCREEN_ASO_EC_ORIGIN_ROGUE_PLANET:0 "Our oldest legends tell of how our planet was created to be the center of the universe. As our technology advanced, we became aware of luminous bodies called 'stars' that suffuse the infinite darkness. We have now devised new methods of travel, which will allow us to reach to these so-called stars. Now, we look outward, to the rest of the galaxy."
+ START_SCREEN_ASO_EC_ORIGIN_SINS_OF_THE_PAST:0 "It has been several generations since the incident. During our exile on this orbital Habitat, we have had time to think, time to learn, and time to change. As our homeworld's climate begins to stabilize into something marginally habitable, our researchers have discovered the secret of the hyperdrive. For generations, we have looked within. Now that the galaxy is within our grasp, we can look without."
+ START_SCREEN_ASO_EC_ORIGIN_TALE_OF_TWO_PLANETS:0 "We have wondered since time immemorial if we were alone in the universe. Throughout history, we have looked to the heavens... to the stars. Imagine our surprise when our earliest astronomers using the most rudimentary telescopes found a peculiar wanderer in our sky. Ever since then, our best scientists have put their minds toward advancing our space sciences."
+ START_SCREEN_ASO_EC_ORIGIN_UNILATERAL_TRADE_AGREEMENT:0 "Decades ago, when our first crude sublight probes visited the star systems neighboring our own, we discovered the presence of a distinct alien civilization. Like us, they were also on the cusp of unlocking practical interstellar travel.\n\nWe proved the stronger, however, and subjugated them in the name of the greater good."
+ START_SCREEN_ASO_EC_ORIGIN_VIOLENT_UPLIFT:0 "The aliens attacked us before we even knew about extraterrestrial life. They caught us unawares, but they did not catch us unprepared. We fought back, and we won. We lost so many of our own, but we gained some their technology. We fortified our own system while reverse engineering their hyperdrives. Now, we are ready to meet them on equal terms. And, we will prevail."
+ 
+
+ ####################################
+ # Event Chains
+ #################################### 
+ aso_ec_origin_amoeba_alveo_chain_title:0 "Space Amoeba Mystery"
+ aso_ec_origin_amoeba_alveo_chain_desc:0 "For aeons we have been aware of the Space Amoebas that we share our star system with. Now that we can travel the void, we must find out what their connection is to us."
+ 
+ 
+ ####################################
+ # Events
+ ####################################
+ aso_ec_origin_amoeba_alveo.1.name:0 "Space Amoebas Appear!"
+ aso_ec_origin_amoeba_alveo.1.desc:0 "New Amoeba pack has left its breeding grounds, ready to make its way in the galaxy."
+ aso_ec_origin_amoeba_alveo.1.a:0 "Fascinating!"
+ aso_ec_origin_amoeba_alveo.1.a.tooltip:0 "Creates a Space Amoeba fleet at the breeding grounds."
+
+ aso_ec_origin_amoeba_alveo.5.name:0 "Amoeba Gathering Exits Star System"
+ aso_ec_origin_amoeba_alveo.5.desc:0 "A gathering of young space amoebas are exiting our star system. We have long known that they must be going somewhere. But now we have the technology to find out where. Our scientists recommend that we further investigate the breeding grounds."
+ aso_ec_origin_amoeba_alveo.5.a:0 "Make it so!"
+ aso_ec_origin_amoeba_alveo.5.a.tooltip:0 "Creates a Special Project to investigate the breeding grounds."
+
+ aso_ec_origin_amoeba_alveo.6.name:0 "Eureka!"
+ aso_ec_origin_amoeba_alveo.6.desc:0 "We found some sort of artificial chamber!"
+ aso_ec_origin_amoeba_alveo.6.a:0 "Great!"
+ aso_ec_origin_amoeba_alveo.6.a.tooltip:0 "Creates archaeological site."
+
+ aso_ec_origin_amoeba_alveo.7.desc:0 "We found a way in to the structure. We must now explore it and learn what its purpose was."
+ aso_ec_origin_amoeba_alveo.8.desc:0 "The initial investigation into the purpose of this structure has been completed. It turns out that this facility was a lab of some sort; there are instruments that our scientists have concluded provide surveillance and analysis capabilities. We have also found some instruments that we have not yet been able to determine their function. We must spend more time determining the purpose of this laboratory."
+ aso_ec_origin_amoeba_alveo.9.desc:0 "Astounding news - it appears that we found out the function of this research facility. It appears they were trying to somehow modify the Space Amoeba species. More time is required to learn what, and why."
+ aso_ec_origin_amoeba_alveo.10.desc:0 "We have concluded that the Space Amoebas were being modified in such a way to make them not only docile, but controllable. Apparently, a sort-of hyperspace laser pointer was going to be used to direct modified Space Amoebas to specific locations, presumably for the purposes of defense. Unfortunately, it looks like the lead scientist not only abandoned the project, but also fled with a key component. We are unsure what the component is, but we have pieced together enough clues to pinpoint the coordinates of his refuge."
+
+ aso_ec_origin_amoeba_alveo.11.name:0 "Second Research Facility Found!"
+ aso_ec_origin_amoeba_alveo.11.desc:0 "We found the scientist's refuge. We must comb it over from top to bottom to find out what he stole, and how it works."
+ aso_ec_origin_amoeba_alveo.11.a:0 "Acknowledged."
+ aso_ec_origin_amoeba_alveo.11.a.tooltip:0 "Creates Special Project in Amor Alveo system."
+
+ aso_ec_origin_amoeba_alveo.12.name:0 "Experiment, Interrupted"
+ aso_ec_origin_amoeba_alveo.12.desc:0 "We now have everything that we need to complete the original experiment. Once we turn on the machine, we believe that any newly-bred Space Amoebas will be completely under our control! What's more, we found the control codes to an abandoned starbase."
+ aso_ec_origin_amoeba_alveo.12.a:0 "Excellent."
+ aso_ec_origin_amoeba_alveo.12.a.tooltip:0 "Grants control of Amor Alveo system if not already owned. Creates Special Project in home system."
+ 
+ aso_ec_origin_amoeba_alveo.13.name:0 "The Culmination"
+ aso_ec_origin_amoeba_alveo.13.desc:0 "It appears that the machine is working, but we must wait until the Space Amoebas have bred more to be sure."
+ aso_ec_origin_amoeba_alveo.13.a:0 "Great!"
+ aso_ec_origin_amoeba_alveo.13.a.tooltip:0 "Time will tell."
+
+ aso_ec_taleoftwoplanets.1.name:0 "Extraterrestrial Life!"
+ aso_ec_taleoftwoplanets.1.desc:0 "As our telescopes advanced, and the images of our sister planet grew more clear, our astronomers eventually concluded beyond a reasonable doubt that there is extraterrestrial life in our solar system!"
+ aso_ec_taleoftwoplanets.1.a:0 "We will face this together."
+ aso_ec_taleoftwoplanets.1.a.tooltip:0 "Our citizens expressed a sense of wonder and fear, threatening to throw our economy into chaos. Thankfully, a strong leader emerged, came to power, and unified the populace to face this new reality together!"
+ aso_ec_taleoftwoplanets.1.b:0 "We must learn more!"
+ aso_ec_taleoftwoplanets.1.b.tooltip:0 "We built our first interplanetary science vessel to study this newfound mystery..."
+ aso_ec_taleoftwoplanets.1.c:0 "We will build a fleet."
+ aso_ec_taleoftwoplanets.1.c.tooltip:0 "We built our first interplanetary navy in case there was a threat..."
+
+ aso_ec_taleoftwoplanets.10.name:0 "A habitable world!"
+ aso_ec_taleoftwoplanets.10.desc:0 "The first of our newly-commissioned vessels arrived at the planet, and found it... empty. Though it supports a healthy and diverse ecosystem, there is nothing even resembling intelligent life."
+ aso_ec_taleoftwoplanets.10.a:0 "A pristine world for the taking!"
+ aso_ec_taleoftwoplanets.10.a.tooltip:0 "We shall colonize the planet and finally become a spaceborne species, learning to survive on many different classes of planets."
+
+ aso_ec_taleoftwoplanets.20.name:0 "An inhabited world!"
+ aso_ec_taleoftwoplanets.20.desc:0 "The first of our newly-commissioned vessels arrived at the planet, and found it... dominated by a presapient species. Though the planet supports a healthy and diverse ecosystem of wildlife, the dominant species can not yet be called intelligent life."
+ aso_ec_taleoftwoplanets.20.a:0 "We must be good stewards of our younger brethren."
+ aso_ec_taleoftwoplanets.20.a.tooltip:0 "We should uplift the poor presapients on this planet and help them reach their destiny among the stars!"
+ aso_ec_taleoftwoplanets.20.b:0 "Squash them."
+ aso_ec_taleoftwoplanets.20.b.tooltip:0 "Our own burgeoning civilization requires the land and natural resources to thrive. The wheels of progress will crush all those who cannot adapt."
+
+ aso_ec_taleoftwoplanets.30.name:0 "An inhabited world!"
+ aso_ec_taleoftwoplanets.30.desc:0 "The first of our newly-commissioned vessels arrived at the planet, and found it... to be home to a burgeoning civilization of primitive alien beings! Though they do not have technology as advanced as our own, there is no doubt that given enough time, they will one day free themselves from the bounds of gravity much like we have."
+ aso_ec_taleoftwoplanets.30.a:0 "Study them."
+ aso_ec_taleoftwoplanets.30.a.tooltip:0 "Our scientists are yearning for the chance to study them in their native habitat."
+ aso_ec_taleoftwoplanets.30.b:0 "We are the true heirs of this new planet."
+ aso_ec_taleoftwoplanets.30.b.tooltip:0 "Sapient or not, this species will not hinder our progress toward the stars."
+
+ aso_ec_taleoftwoplanets.40.name:0 "A tomb world!"
+ aso_ec_taleoftwoplanets.40.desc:0 "The first of our newly-commissioned vessels arrived at the planet, and found it... to be devastated almost beyond comprehension. Scans of the surface show high levels of radiation, and the ruined of a civilization."
+ aso_ec_taleoftwoplanets.40.a:0 "We can only wonder..."
+ aso_ec_taleoftwoplanets.40.a.tooltip:0 "We are unsure precisely how the planet came to be this way, but thermonuclear devices likely played a large part."
+ aso_ec_taleoftwoplanets.50.name:0 "Another Space-Age Civilization!"
+
+ aso_ec_taleoftwoplanets.50.desc:0 "The first of our newly-commissioned vessels arrived at the planet, and found it... to be home to a burgeoning civilization of space-age alien beings! Though they have not yet mastered spaceflight, they have sent rockets and primitive manned space capsules beyond their atmosphere."
+ aso_ec_taleoftwoplanets.50.a:0 "Do nothing for now..."
+ aso_ec_taleoftwoplanets.50.a.tooltip:0 "We are unsure precisely how to proceed, so for now, we will do nothing but observe."
+ aso_ec_taleoftwoplanets.50.b:0 "Make first contact..."
+ aso_ec_taleoftwoplanets.50.b.tooltip:0 "We must contact them and see what we can learn from each other!" 
+ aso_ec_taleoftwoplanets.50.c:0 "Commence first strike protocol..."
+ aso_ec_taleoftwoplanets.50.c.tooltip:0 "They are dangerous, and we must conquer them or soon face our equals in space."
+
+ aso_ec_taleoftwoplanets.51.name:0 "They Make Contact"
+ aso_ec_taleoftwoplanets.51.desc:0 "After some time, they ended up making contact with us. Apparently, their discovery of our existence has frightened them into a war footing! They have mastered the atom, and, if provoked, enough of their rockets may make it through our defenses to stike our homeworld."
+ aso_ec_taleoftwoplanets.51.a:0 "We cannot allow this!"
+ aso_ec_taleoftwoplanets.51.a.tooltip:0 "They cannot be allowed to maintain a military capability to threaten us!"
+ aso_ec_taleoftwoplanets.51.b:0 "Give peace a chance!"
+ aso_ec_taleoftwoplanets.51.b.tooltip:0 "We must press on diplomatically at all costs!" 
+
+ aso_ec_taleoftwoplanets.5111.name:0 "They Attack!"
+ aso_ec_taleoftwoplanets.5111.desc:0 "Using rocketry that was surprisingly beyond our own, they shot down one of our corvettes. We retaliated. The war was short but brutal. After a brief series of escalations, they launched thousands of nuclear missiles at our homeworld. We got most of them, but some of them made it through. Casualties were in the millions. We retaliated with extreme prejudice."
+ aso_ec_taleoftwoplanets.5111.a:0 "They brought it on themselves..."
+ aso_ec_taleoftwoplanets.5111.a.tooltip:0 "Thus ends their story. Ours, meanwhile, is just beginning."
+
+ aso_ec_taleoftwoplanets.5112.name:0 "They Attack!"
+ aso_ec_taleoftwoplanets.5112.desc:0 "Using rocketry that was surprisingly beyond our own, they shot down one of our corvettes. We retaliated. The war was short but brutal. After a brief series of escalations, they launched thousands of nuclear missiles at our homeworld. We got shot them all down, but before we could retaliate, they surrendered to our technological might."
+ aso_ec_taleoftwoplanets.5112.a:0 "They will now become part of our great civilization."
+ aso_ec_taleoftwoplanets.5112.a.tooltip:0 "Thus ends their story. Ours, meanwhile, is just beginning."
+
+ aso_ec_taleoftwoplanets.5113.name:0 "They Attack!"
+ aso_ec_taleoftwoplanets.5113.desc:0 "Using rocketry that was surprisingly beyond our own, they shot down one of our corvettes. We retaliated. The war was long and brutal. After a brief series of escalations, they launched thousands of nuclear missiles at our homeworld. We got shot them all down, and began a long and bloody ground campaign. After many years of fighting, and many attempts at soliciting their surrender, we finally wiped them all out."
+ aso_ec_taleoftwoplanets.5113.a:0 "We gave them a chance..."
+ aso_ec_taleoftwoplanets.5113.a.tooltip:0 "Thus ends their story. Ours, meanwhile, is just beginning."
+
+ aso_ec_taleoftwoplanets.521.name:0 "A More Perfect Union"
+ aso_ec_taleoftwoplanets.521.desc:0 "After some initial communication glitches and cultural snafus, logic, common sense, and diplomacy won out over fear, uncertainty, and doubt. Our two planets ultimately decided to merge into one system-wide government, for the greater good."
+ aso_ec_taleoftwoplanets.521.a:0 "Peace won out after all..."
+ aso_ec_taleoftwoplanets.521.a.tooltip:0 "Thus ends our own stories. Together, however, we will write the future of the galaxy."
+
+ 
+ ####################################
+ # Opinion Modifiers
+ ####################################
+ opinion_aso_ec_origin_enlightened:0 "We Enlightened Them"
+ opinion_aso_ec_origin_violent_uplift:0 "Violent Uplift"
+ 
+ 
+ ####################################
+ # Origins
+ ####################################
+ 
+ aso_ec_origin_amoeba_alveo:0 "Amoeba Alveo"
+ aso_ec_origin_amoeba_alveo_desc:0 "This civilization shares a special bond with the Space Amoebas that breed in its home system."
+ aso_ec_origin_tooltip_amoeba_alveo_effects:0 "Start the game with §HSpace Amoeba Pacification§!. There are §HSpace Amoeba Breeding Grounds§! in your home system. §HSpace Amoebas§! will periodically spawn and attempt a migration to their home system §HAmor Alveo§!. Can you discover how to utilize them for your defense?"
+
+ aso_ec_origin_eldest_sibling:0 "Eldest Sibling"
+ aso_ec_origin_eldest_sibling_desc:0 "This society has an old legend about splinter groups of the population who left the planet in search for other planets to colonize in nearby solar systems."
+ aso_ec_origin_tooltip_eldest_sibling_effects:0 "Start with §Ytwo primitive civilizations§! of the same species neighboring your home system."
+
+ aso_ec_origin_enlightened:0 "Enlightened"
+ aso_ec_origin_enlightened_desc:0 "The natural development of this civilization was greatly accelerated by the interference of another party, who helped them become a spacefaring culture."
+ aso_ec_origin_tooltip_enlightened_effects:0 "Starts the game as a protectorate of a more advanced empire. §RWarning: Challenging Origin§!"
+
+ aso_ec_origin_living_planet:0 "Living Planet"
+ aso_ec_origin_living_planet_desc:0 "Convergent evolution has resulted in this planet slowly being entirely covered by a single Hive Mind organism."
+ aso_ec_origin_tooltip_living_planet_effects:0 "Start the game with a Hive World as your homeworld."
+
+ aso_ec_origin_overlord:0 "Overlord"
+ aso_ec_origin_overlord_desc:0 "This civilization established early contact with its immediate alien neighbor. Gradually, over the span of a century, subjugated their hapless neighbor into a vassal state."
+ aso_ec_origin_tooltip_overlord_effects:0 "Start the game with a vassal. Your vassal will occupy one of the Guaranteed Habitable Worlds slots near your home system."
+ aso_ec_origin_overlord_npc:0 "$aso_ec_origin_overlord$"
+ aso_ec_origin_overlord_npc_desc:0 "This civilization established early contact with its immediate alien neighbor. Gradually, over the span of a century, they were subjugated by this neighbor into a vassal state."
+ aso_ec_origin_tooltip_overlord_npc_effects:0 "Start the game as a vassal. Your overlord will occupy one of the Guaranteed Habitable Worlds slots near your home system."
+ 
+ aso_ec_origin_presentient_cousins:0 "Pre-Sapient Cousins"
+ aso_ec_origin_presentient_cousins_desc:0 "Another species evolved on this civilization's homeworld. It appears they may be close to reaching sentience."
+ aso_ec_origin_tooltip_presentient_cousins_effects:0 "Starts the game with §Y3§! £pop£ Pre-sapient Pops."
+
+ aso_ec_origin_rogue_planet:0 "Rogue Planet"
+ aso_ec_origin_rogue_planet_desc:0 "This civilization's homeworld is a starless rogue planet floating in the void of space. An abnormally hot core and constant vulcanism allow life to thrive on the planet surface."
+ aso_ec_origin_tooltip_rogue_planet_effects:0 "Starts the game on a starless rogue planet system. There will be no habitable planets nearby. §RWarning: Challenging Origin§!"
+
+ aso_ec_origin_sins_of_the_past:0 "Sins of the Past"
+ aso_ec_origin_sins_of_the_past_desc:0 "Whether through accident, war, or another means, this civilization nuked their own planet. A small portion of their populace escaped to an orbital habitat before the planet became completely uninhabitable. Enough time has passed, now, that their homeworld is habitable, if only barely."
+ aso_ec_origin_tooltip_sins_of_the_past_effects:0 "Start the game in a Habitat orbiting your nuked homeworld."
+  
+ aso_ec_origin_tale_of_two_planets:0 "Tale of Two Planets"
+ aso_ec_origin_tale_of_two_planets_desc:0 "A choose-your-own-adventure origin (with random elements) involving another habitable planet in your home system."
+ aso_ec_origin_tooltip_tale_of_two_planets_effects:0 "Start the game with another habitable world in your home system."
+ 
+ aso_ec_origin_unilateral_trade_agreement:0 "Unilateral Trade Agreement"
+ aso_ec_origin_unilateral_trade_agreement_desc:0 "This civilization established early contact with its immediate alien neighbor. Gradually, over the span of a century, subjugated their hapless neighbor into a tributary."
+ aso_ec_origin_tooltip_unilateral_trade_agreement_effects:0 "Start the game with a tributary. Your tributary will occupy one of the Guaranteed Habitable Worlds slots near your home system."
+ aso_ec_origin_unilateral_trade_agreement_npc:0 "$aso_ec_origin_unilateral_trade_agreement$"
+ aso_ec_origin_unilateral_trade_agreement_npc_desc:0 "This civilization established early contact with its immediate alien neighbor. Gradually, over the span of a century, they were subjugated by this neighbor into a tributary state."
+ aso_ec_origin_tooltip_unilateral_trade_agreement_npc_effects:0 "Start the game as a tributary. Your overlord will occupy one of the Guaranteed Habitable Worlds slots near your home system."
+
+ aso_ec_origin_violent_uplift:0 "Violent Uplift"
+ aso_ec_origin_violent_uplift_desc:0 "This civilization was brought into the interstellar age by defending itself against a superior foe."
+ aso_ec_origin_tooltip_violent_uplift_effects:0 "Start the game with extra corvettes, a fleet of transport ships and a bonus to Unity, Influence, Research Speed, and Governing Ethics Attraction. Homeworld gets an upgraded Starbase. However, your homeworld has Devastation, extra blockers, and fewer pops. An advanced genocidal empire starts near you."
+
+
+ ####################################
+ # Planet Classes
+ ####################################
+ pc_aso_ec_rogue_planet_star:0 "Rogue Planet"
+ pc_aso_ec_rogue_planet_star_desc:0 "A rogue planet that has been wandering the galaxy for unknown aeons."
+
+
+ ####################################
+ # Planetary Deposits
+ ####################################
+
+ d_aso_ec_supply_cache:0 "Supply Cache"
+ d_aso_ec_supply_cache_desc:0 "A planet's worth of supplies, tightly packed in every nook and cranny of the Habitat."
+
+ d_aso_ec_supply_cache_lithoid:0 "Supply Cache"
+ d_aso_ec_supply_cache_lithoid_desc:0 "A planet's worth of supplies, tightly packed in every nook and cranny of the Habitat."
+
+
+ ####################################
+ # Solar System Initializers
+ ####################################
+ aso_ec_origin_rogue_planet_home_system_initializer:0 "Rogue Planet System"
+ aso_ec_origin_rogue_planet_home_system_initializer_desc:0 "This will always be the starting system when using the Rogue Planet Origin."
+
+
+ ####################################
+ # Special Projects
+ ####################################
+ ASO_EC_ORIGIN_AMOEBA_ALVEO_1_INVESTIGATE_BREEDING_GROUNDS:0 "Investigate Breeding Grounds."
+ ASO_EC_ORIGIN_AMOEBA_ALVEO_1_INVESTIGATE_BREEDING_GROUNDS_DESC:0 "If we search the planet using our new hyperdrive sensors, perhaps we can find out why the Space Amoebas breed here, and where they migrate to."
+
+ ASO_EC_ORIGIN_AMOEBA_ALVEO_2_INVESTIGATE_COORDINATES:0 "Investigate Coordinates."
+ ASO_EC_ORIGIN_AMOEBA_ALVEO_2_INVESTIGATE_COORDINATES_DESC:0 "We should scour the second research facility for any clues."
+
+ ASO_EC_ORIGIN_AMOEBA_ALVEO_3_TURN_ON_MACHINE:0 "Turn on the machine."
+ ASO_EC_ORIGIN_AMOEBA_ALVEO_3_TURN_ON_MACHINE_DESC:0 "We now know there is a machine buried deep under the archeological site, and we now have the final component required to turn it on."
+ 
+ 
+ ####################################
+ # Star Classes
+ ####################################
+ sc_aso_ec_rogue_planet_star:0 "$pc_aso_ec_rogue_planet_star$"
+ sc_aso_ec_rogue_planet_star_desc:0 "$pc_aso_ec_rogue_planet_star_desc$"
+ 
+
+ #####################################
+ # Static Modifiers
+ #####################################
+ 
+ # Origins
+ mod_aso_ec_origin_violent_uplift:0 "Violent Uplift"
+ mod_aso_ec_origin_violent_uplift_desc:0 "We were violently uplifted into the interstellar arena. This has unified our empire. We have a lot of catching up to do."
+
+ # Planet Modifiers
+ pm_aso_ec_origin_amoeba_alveo_breeding_grounds:0 "Space Amoeba Breeding Grounds"
+ pm_aso_ec_origin_amoeba_alveo_breeding_grounds_desc:0 "For unknown reasons, the Space Amoebas spawn their young here."
+ 

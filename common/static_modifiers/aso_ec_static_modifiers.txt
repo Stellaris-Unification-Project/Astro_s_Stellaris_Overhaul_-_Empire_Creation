@@ -1,0 +1,30 @@
+####################
+# STATIC MODIFIERS #
+####################
+#
+## Origins
+# Violent Uplift (+10% Unity, +10% Governing Ethics Attraction, +5% Research Speed, +0.5 Monthly Influence)
+#
+## Planet Modifiers
+# Amoeba Alveo Breeding Grounds
+# 
+
+#####
+# Origins
+#####
+mod_aso_ec_origin_violent_uplift = {
+	icon = "gfx/interface/icons/modifiers/mod_aso_ec_origin_violent_uplift.dds"
+	country_unity_produces_mult = 0.1
+	pop_government_ethic_attraction = 0.1
+	all_technology_research_speed = 0.05
+	country_base_influence_produces_add = 0.50
+}
+
+
+#####
+# Planet Modifiers
+#####
+pm_aso_ec_origin_amoeba_alveo_breeding_grounds = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_aso_ec_origin_amoeba_alveo_breeding_grounds.dds"
+	icon_frame = 2
+}

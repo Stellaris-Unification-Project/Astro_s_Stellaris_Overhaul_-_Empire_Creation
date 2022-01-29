@@ -1,0 +1,369 @@
+#############
+## ORIGINS ##
+#############
+#
+# Amoeba Alveo (Special interactions with Space Amoebas)
+# Eldest Sibling (Start with 2 primitive civilizations on Guaranteed Habitable Worlds)
+# Enlightened (Start as Protectorate of an Advanced Empire)
+# Living Planet (Start on a Hive World)
+# Overlord (Start the game with a Vassal)
+# Presentient Cousins (Start with 3 Presentient Pops)
+# Rogue Planet (Starts the game on a starless rogue planet system and no Guaranteed Habitable Worlds)
+# Sins of the Past (Start the game in a Habitat orbiting your nuked homeworld)
+# Tale of Two Planets (Start with another habitable world in your home system)
+# Unilateral Trade Agreement (Start the game with a Tributary on a Guaranteed Habitable World)
+# Violent Uplift (Start the game with bonus fleet and resources and damaged homeworld. An advanced genocidal empire starts near you)
+
+#aso_ec_origin_nameoforigin = {
+#	is_origin = yes
+#	icon = "gfx/interface/icons/origins/aso_ec_origin_nameoforigin.dds"
+#	picture = GFX_aso_ec_origin_nameoforigin
+#
+#	max_once_global = yes
+#	initializers = { aso_ec_origin_nameoforigin_home_system_initializer }
+#	preferred_planet_class_neighbor = no
+#	non_colonizable_planet_class_neighbor = no
+#	starting_colony = pc_whatever
+#	habitability_preference = pc_whatever
+#
+#	playable = { always = yes } # If DLC required, put that here.
+#
+#	potential = { always = yes } # always yes unless npc only... then don't use this.
+#	
+#	possible = { } # Requirements (must be this ethic, etc.)
+#
+#	description = "aso_ec_origin_tooltip_nameoforigin_effects" # For NPC origins, might use origin_no_effect
+#	flags = { custom_start_screen }
+#
+#	has_secondary_species = {	# for other species in starting empire
+#		title = civic_syncretic_evolution_secondary_species
+#		traits = {}
+#	}
+#
+#	traits = {} 
+#
+#	modifier = {}
+#	
+#	advanced_start = yes
+#
+#	random_weight = { base = 100 } # Always 100, unless npc only (then it is 0)
+#}
+
+aso_ec_origin_amoeba_alveo = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/aso_ec_origin_amoeba_alveo.dds"
+	picture = GFX_aso_ec_origin_amoeba_alveo
+
+	max_once_global = yes
+
+	playable = { always = yes }
+
+	potential = { always = yes }
+	
+	possible = {
+		ethics = {
+			NOR = {
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+		authority = { NOT = { value = auth_machine_intelligence } }
+	}
+
+	description = "aso_ec_origin_tooltip_amoeba_alveo_effects"
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = { base = 100 }
+}
+
+aso_ec_origin_eldest_sibling = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/aso_ec_origin_eldest_sibling.dds"
+	picture = GFX_aso_ec_origin_eldest_sibling
+	max_once_global = yes
+	
+	playable = { always = yes }
+
+	potential = { always = yes }
+
+	possible = { ethics = { NOT = {	value = ethic_gestalt_consciousness	} } }
+
+	description = "aso_ec_origin_tooltip_eldest_sibling_effects"
+	flags = { custom_start_screen }
+	
+	traits = {}
+
+	advanced_start = no
+
+	random_weight = { base = 100 }
+}
+
+aso_ec_origin_enlightened = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/aso_ec_origin_enlightened.dds"
+	picture = GFX_aso_ec_origin_enlightened
+	max_once_global = yes
+	
+	playable = { always = yes }
+
+	potential = { always = yes }
+
+	possible = {
+		ethics = { 
+			NOR = {
+				value = ethic_gestalt_consciousness
+				value = ethic_fanatic_xenophobe
+				value = ethic_xenophobe
+			}
+		}
+	}
+
+	description = "aso_ec_origin_tooltip_enlightened_effects"
+	flags = { custom_start_screen }
+	
+	advanced_start = no
+
+	random_weight = { base = 25 }
+}
+
+aso_ec_origin_living_planet = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/aso_ec_origin_living_planet.dds"
+	picture = GFX_aso_ec_origin_living_planet
+#	starting_colony = pc_hive
+	max_once_global = yes
+
+	playable = { host_has_dlc = "Utopia" }
+	
+	potential = { always = yes }
+
+	possible = {
+		authority = { value = auth_hive_mind }
+		species_archetype = { NOT = { value = LITHOID } }
+	}
+
+	description = "aso_ec_origin_tooltip_living_planet_effects"
+	flags = { custom_start_screen }
+	
+	advanced_start = yes
+	
+	random_weight = { base = 100 }
+}
+
+aso_ec_origin_overlord = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/aso_ec_origin_overlord.dds"
+	picture = GFX_aso_ec_origin_overlord
+	max_once_global = yes
+
+	playable = { always = yes }
+
+	potential = { always = yes }
+
+	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_fanatic_purifiers
+				value = civic_inwards_perfection
+			}
+		}
+	}
+
+	description = "aso_ec_origin_tooltip_overlord_effects"
+	flags = { custom_start_screen }
+
+	advanced_start = no
+	
+	random_weight = { base = 50 }
+}
+
+aso_ec_origin_overlord_npc = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/aso_ec_origin_overlord_npc.dds"
+	picture = GFX_aso_ec_origin_overlord
+
+	playable = { always = no } # Non-player origin
+
+	description = "aso_ec_origin_tooltip_overlord_npc_effects"
+
+	advanced_start = no
+
+	random_weight = { base = 0 }
+}
+
+aso_ec_origin_presentient_cousins = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/aso_ec_origin_presentient_cousins.dds"
+	picture = GFX_aso_ec_origin_presentient_cousins
+	max_once_global = yes
+	
+	playable = { always = yes }
+
+	possible = {
+		ethics = { 
+			NOR = {
+				value = ethic_gestalt_consciousness
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+
+	description = "aso_ec_origin_tooltip_presentient_cousins_effects"
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = { base = 100 }
+}
+
+aso_ec_origin_rogue_planet = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/aso_ec_origin_rogue_planet.dds"
+	picture = GFX_aso_ec_origin_rogue_planet
+
+	max_once_global = yes
+	initializers = { aso_ec_origin_rogue_planet_home_system_initializer }
+
+	playable = { always = yes }
+
+	potential = { always = yes }
+	
+	description = "aso_ec_origin_tooltip_rogue_planet_effects"
+	flags = { custom_start_screen }
+
+	advanced_start = no
+
+	random_weight = { base = 100 }
+}
+
+aso_ec_origin_sins_of_the_past = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/aso_ec_origin_sins_of_the_past.dds"
+	picture = GFX_aso_ec_origin_sins_of_the_past
+	max_once_global = yes
+	initializers = { aso_ec_origin_sins_of_the_past_home_system_initializer }
+	
+	playable = { always = yes }
+	
+	potential = { always = yes }
+	
+	possible = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	
+	description = "aso_ec_origin_tooltip_sins_of_the_past_effects"
+	flags = { custom_start_screen }
+	
+	advanced_start = no
+	
+	random_weight = { base = 100 }
+}
+
+aso_ec_origin_tale_of_two_planets = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/aso_ec_origin_tale_of_two_planets.dds"
+	picture = GFX_aso_ec_origin_tale_of_two_planets
+	max_once_global = yes
+
+	playable = { always = yes }
+
+	potential = { always = yes }
+	
+	possible = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	
+	description = "aso_ec_origin_tooltip_tale_of_two_planets_effects"
+	flags = { custom_start_screen }
+	
+	advanced_start = no
+	
+	random_weight = { base = 100 }
+}
+
+aso_ec_origin_unilateral_trade_agreement = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/aso_ec_origin_unilateral_trade_agreement.dds"
+	picture = GFX_aso_ec_origin_unilateral_trade_agreement
+	max_once_global = yes
+
+	playable = { always = yes }
+
+	potential = { always = yes }
+
+	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_fanatic_purifiers
+				value = civic_inwards_perfection
+			}
+		}
+	}
+
+	description = "aso_ec_origin_tooltip_unilateral_trade_agreement_effects"
+	flags = { custom_start_screen }
+
+	advanced_start = no
+	
+	random_weight = { base = 50 }
+}
+
+aso_ec_origin_unilateral_trade_agreement_npc = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/aso_ec_origin_unilateral_trade_agreement.dds"
+	picture = GFX_aso_ec_origin_unilateral_trade_agreement
+
+	playable = { always = no } # Non-player origin 
+
+	possible = {}
+
+	description = "aso_ec_origin_tooltip_unilateral_trade_agreement_npc_effects"
+	flags = { custom_start_screen }
+
+	advanced_start = no
+
+	random_weight = { base = 0 }
+}
+
+aso_ec_origin_violent_uplift = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/aso_ec_origin_violent_uplift.dds"
+	picture = GFX_aso_ec_origin_violent_uplift
+	max_once_global = yes
+
+	playable = { always = yes }
+
+	potential = { always = yes }
+	
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+
+	description = "aso_ec_origin_tooltip_violent_uplift_effects"
+	flags = { custom_start_screen }
+	
+	advanced_start = no
+	
+	random_weight = { base = 25 }
+}

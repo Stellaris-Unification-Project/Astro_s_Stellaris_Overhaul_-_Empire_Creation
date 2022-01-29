@@ -1,0 +1,269 @@
+namespace = aso_ec_origin_amoeba_alveo
+
+### Spawn new Amoeba Fleet from Amoeba Breeding Grounds
+event = {
+	id = aso_ec_origin_amoeba_alveo.1
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = { exists = event_target:get_aso_ec_origin_amoeba_alveo_country }
+	
+	immediate = {
+		event_target:get_aso_ec_origin_amoeba_alveo_country = {
+			country_event = { id = aso_ec_origin_amoeba_alveo.2 days = 10 random = 30 }
+			country_event = { id = aso_ec_origin_amoeba_alveo.3 days = 10 random = 30 }
+			country_event = { id = aso_ec_origin_amoeba_alveo.4 days = 10 random = 30 }
+		}
+	}
+}
+
+### Spawn amoeba mother from Amoeba Breeding Grounds
+country_event = {
+	id = aso_ec_origin_amoeba_alveo.2
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = { event_target:get_aso_ec_origin_amoeba_alveo_country = { aso_ec_origin_amoeba_alveo_spawn_amoeba_mother = yes } }
+}
+
+### Spawn amoeba father from Amoeba Breeding Grounds
+country_event = {
+	id = aso_ec_origin_amoeba_alveo.3
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = { event_target:get_aso_ec_origin_amoeba_alveo_country = { aso_ec_origin_amoeba_alveo_spawn_amoeba_father = yes } }
+}
+
+### Spawn new Amoeba Fleet from Amoeba Breeding Grounds
+country_event = {
+	id = aso_ec_origin_amoeba_alveo.4
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = { event_target:get_aso_ec_origin_amoeba_alveo_country = { aso_ec_origin_amoeba_alveo_spawn_amoeba_fleet = yes } }
+}
+
+### Create Event Chain & Special Project to investigate 
+country_event = {
+	id = aso_ec_origin_amoeba_alveo.5
+	title = aso_ec_origin_amoeba_alveo.5.name
+	desc = aso_ec_origin_amoeba_alveo.5.desc
+	picture = GFX_evt_alien_wildlife
+	show_sound = event_screams
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aso_ec_origin_amoeba_alveo.5.a
+		custom_tooltip = aso_ec_origin_amoeba_alveo.5.a.tooltip
+		hidden_effect = {
+			begin_event_chain = {
+				event_chain = "aso_ec_origin_amoeba_alveo_chain"
+				target = root
+			}
+			enable_special_project = {
+				name = "aso_ec_ORIGIN_AMOEBA_ALVEO_1_INVESTIGATE_BREEDING_GROUNDS"
+				location = event_target:get_aso_ec_origin_amoeba_alveo_breeding_grounds
+				owner = root
+			}
+		}
+	}
+}
+
+### Create Arch Site
+ship_event = {
+	id = aso_ec_origin_amoeba_alveo.6
+	title = aso_ec_origin_amoeba_alveo.6.name
+	desc = aso_ec_origin_amoeba_alveo.6.desc
+	picture = GFX_evt_alien_wildlife
+	show_sound = event_screams
+
+	is_triggered_only = yes
+
+	option = {
+		name = aso_ec_origin_amoeba_alveo.6.a
+		custom_tooltip = aso_ec_origin_amoeba_alveo.6.a.tooltip
+		hidden_effect = { event_target:get_aso_ec_origin_amoeba_alveo_breeding_grounds = { create_archaeological_site = aso_ec_origin_amoeba_alveo_dig_site_1 } }
+	}
+}
+
+### Found a way in.
+fleet_event = { 
+	id = aso_ec_origin_amoeba_alveo.7
+	title = aso_ec_origin_amoeba_alveo_dig_site_1
+	desc = aso_ec_origin_amoeba_alveo.7.desc
+	picture = GFX_evt_zro_3
+	show_sound = event_whispering
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = INTERESTING
+		small_artifact_reward = yes
+	}
+}
+
+### Investigated the lab.
+fleet_event = { 
+	id = aso_ec_origin_amoeba_alveo.8
+	title = aso_ec_origin_amoeba_alveo_dig_site_1
+	desc = aso_ec_origin_amoeba_alveo.8.desc
+	picture = GFX_evt_zro_3
+	show_sound = event_whispering
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = INTERESTING
+		small_artifact_reward = yes
+	}
+}
+
+### Found out why were they studying Space Amoebas.
+fleet_event = { 
+	id = aso_ec_origin_amoeba_alveo.9
+	title = aso_ec_origin_amoeba_alveo_dig_site_1
+	desc = aso_ec_origin_amoeba_alveo.9.desc
+	picture = GFX_evt_zro_3
+	show_sound = event_whispering
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = INTERESTING
+		small_artifact_reward = yes
+	}
+}
+
+### End of Arch Site. Create POI in Amor Alveo.
+fleet_event = { 
+	id = aso_ec_origin_amoeba_alveo.10
+	title = aso_ec_origin_amoeba_alveo_dig_site_1
+	desc = aso_ec_origin_amoeba_alveo.10.desc
+	picture = GFX_evt_zro_3
+	show_sound = event_whispering
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = INTERESTING
+		small_artifact_reward = yes
+		event_target:get_aso_ec_origin_amoeba_alveo_country = {
+			create_point_of_interest = {
+				id = aso_ec_origin_amoeba_alveo_poi.1
+				name = "aso_ec_origin_amoeba_alveo_poi_1"
+				desc = "aso_ec_origin_amoeba_alveo_poi_1_desc"
+				event_chain = "aso_ec_origin_amoeba_alveo_chain"
+				location = event_target:amoeba_home_system
+			}
+			set_country_flag = cf_aso_ec_origin_amoeba_alveo_10
+		}
+	}
+}
+
+### Enter Amor Alveo, create Special Project.
+fleet_event = {
+	id = aso_ec_origin_amoeba_alveo.11
+	title = "aso_ec_origin_amoeba_alveo.11.name"
+	desc = "aso_ec_origin_amoeba_alveo.11.desc"
+	picture = GFX_evt_ship_travel
+	show_sound = event_mystic_reveal
+	location = event_target:amoeba_home_system
+	trackable = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = { has_country_flag = cf_aso_ec_origin_amoeba_alveo_10 }
+		FROM = { has_star_flag = amoeba_home_system }
+	}
+
+	immediate = {
+		owner = {
+			remove_country_flag = cf_aso_ec_origin_amoeba_alveo_10
+			remove_point_of_interest = aso_ec_origin_amoeba_alveo_poi.1
+		}
+		create_ambient_object = {
+			type = "abandoned_starbase_01_object"
+			location = solar_system
+		}
+		last_created_ambient_object = {
+			save_event_target_as = get_aso_ec_origin_amoeba_alveo_amor_facility
+			enable_special_project = {
+				name = "aso_ec_ORIGIN_AMOEBA_ALVEO_2_INVESTIGATE_COORDINATES"
+				location = this
+				owner = root
+			}
+		}
+	}
+
+	option = { name = "aso_ec_origin_amoeba_alveo.11.a" }
+}
+
+### Create Special Project in home system to turn on machine; grant starbase in Amor Alveo.
+ship_event = {
+	id = aso_ec_origin_amoeba_alveo.12
+	title = aso_ec_origin_amoeba_alveo.12.name
+	desc = aso_ec_origin_amoeba_alveo.12.desc
+	picture = GFX_evt_alien_wildlife
+	show_sound = event_screams
+
+	is_triggered_only = yes
+	
+
+	option = {
+		name = aso_ec_origin_amoeba_alveo.12.a
+		custom_tooltip = aso_ec_origin_amoeba_alveo.12.a.tooltip
+		enable_special_project = {
+			name = "aso_ec_ORIGIN_AMOEBA_ALVEO_3_TURN_ON_MACHINE"
+			location = event_target:get_aso_ec_origin_amoeba_alveo_breeding_grounds
+			owner = root
+		}
+		if = {
+			limit = { event_target:amoeba_home_system = { has_owner = no } }
+			event_target:amoeba_home_system = {
+				create_starbase = {
+					owner = event_target:get_aso_ec_origin_amoeba_alveo_country
+					size = starbase_citadel
+				}
+			}
+		}
+	}
+}
+
+### Turned on facility.
+ship_event = { 
+	id = aso_ec_origin_amoeba_alveo.13
+	title = aso_ec_origin_amoeba_alveo_dig_site_1
+	desc = aso_ec_origin_amoeba_alveo.13.desc
+	picture = GFX_evt_zro_3
+	show_sound = event_whispering
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = INTERESTING
+		event_target:get_aso_ec_origin_amoeba_alveo_country = { end_event_chain = "aso_ec_origin_amoeba_alveo_chain" }
+
+		hidden_effect = { set_global_flag = gf_aso_ec_origin_amoeba_alveo_turned_on_facility }
+	}
+}

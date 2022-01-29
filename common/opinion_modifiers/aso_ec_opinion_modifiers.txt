@@ -1,0 +1,10 @@
+##########
+# ORIGIN OPINION MODIFIERS
+##########
+
+opinion_aso_ec_origin_enlightened = {
+	opinion = { base = 100 }
+	decay = { base = 5 }
+}
+
+opinion_aso_ec_origin_violent_uplift = { opinion = { base = -1000 } }

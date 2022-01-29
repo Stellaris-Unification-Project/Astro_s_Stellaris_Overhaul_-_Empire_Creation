@@ -1,0 +1,18 @@
+sc_aso_ec_rogue_planet_star = {
+	class 			= aso_ec_rogue_planet_star
+	icon_scale		= 2.0
+	planet			= { key = pc_aso_ec_rogue_planet_star }
+	spawn_odds 		= 0
+	num_planets 	= { min = 1 max = 1 }
+
+	pc_continental 	= { spawn_odds = 0.6 }
+	pc_desert		= { spawn_odds = 0.6 }
+	pc_tropical		= { spawn_odds = 0.6 }
+	pc_arid 		= { spawn_odds = 0.6 }
+	pc_ocean		= { spawn_odds = 0.6 }
+	pc_tundra		= { spawn_odds = 0.6 }
+	pc_arctic		= { spawn_odds = 0.6 }
+	pc_alpine		= { spawn_odds = 0.6 }
+	pc_savannah		= { spawn_odds = 0.6 }
+	pc_gaia			= { spawn_odds = 0.1 }
+}

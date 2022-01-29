@@ -1,0 +1,48 @@
+Feature Summary:
+* Vanilla Overwrites
+	- Removed all prescripted empires.
+* New Content
+	- New Origins:
+		# Amoeba Alveo: This civilization shares a special bond with the Space Amoebas that breed in its home system.
+		# Eldest Sibling: This society has an old legend about splinter groups of the population who left the planet in search for other planets to colonize in nearby solar systems.
+		# Enlightened: [Warning! Challenging Origin!] The natural development of this civilization was greatly accelerated by the interference of another party, who helped them become a spacefaring culture.
+		# Living Planet: Convergent evolution has resulted in this planet slowly being entirely covered by a single Hive Mind organism.
+		# Overlord: This civilization established early contact with its immediate alien neighbor. Gradually, over the span of a century, subjugated their hapless neighbor into a vassal state.
+		# Presentient Cousins: Another species evolved on this civilization's homeworld. It appears they may be close to reaching sentience.
+		# Rogue Planet: [Warning! Challenging Origin!] This civilization's homeworld is a starless rogue planet floating in the void of space. An abnormally hot core and constant vulcanism allow life to thrive on the planet surface.
+		# Sins of the Past: Whether through accident, war, or another means, this civilization nuked their own planet. A small portion of their populace escaped to an orbital habitat before the planet became completely uninhabitable. Enough time has passed, now, that their homeworld is habitable, if only barely.
+		# Tale of Two Planets: A choose-your-own-adventure origin (with random elements) involving another habitable planet in your home system.
+		# Unilateral Trade Agreement: This civilization established early contact with its immediate alien neighbor. Gradually, over the span of a century, subjugated their hapless neighbor into a tributary.
+		# Violent Uplift: This civilization was brought into the interstellar age by defending itself against a superior foe.
+	- New Random Species Names
+
+************
+* FEATURES *
+************
+
+* Vanilla Overwrites
+	- Removed all prescripted empires.
+
+* New Content
+	- Origins:
+		# Amoeba Alveo (Special interactions with Space Amoebas)
+		# Eldest Sibling (Start with 2 primitive civilizations on Guaranteed Habitable Worlds)
+		# Enlightened (Start as Protectorate of an Advanced Empire)
+		# Living Planet (Start on a Hive World)
+		# Overlord (Start the game with a Vassal)
+		# Presentient Cousins (Start with 3 Presentient Pops)
+		# Rogue Planet (Starts the game on a starless rogue planet system and no Guaranteed Habitable Worlds)
+		# Sins of the Past (Start the game in a Habitat orbiting your nuked homeworld)
+		# Tale of Two Planets (Start with another habitable world in your home system)
+		# Unilateral Trade Agreement (Start the game with a Tributary on a Guaranteed Habitable World)
+		# Violent Uplift (Start the game with bonus fleet and resources and damaged homeworld. An advanced genocidal empire starts near you)
+	- Random Species Names
+		- Arthropoid Names
+		- Avian Names
+		- Fungoid Names
+		- Humanoid Names
+		- Lithoid Names
+		- Mammalian Names
+		- Molluscoid Names
+		- Plantoid Names
+		- Reptilian Names
